@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>公共样式</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<!--navbar-inverse 导航条反色-->
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+						<a class="navbar-brand" href="#">
+							<img src="img/logo.png" />
+						</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="#">首页 <span class="sr-only">(current)</span></a>
+							</li>
+							<li>
+								<a href="#">Laya家族</a>
+							</li>
+							<li>
+								<a href="#">游戏</a>
+							</li>
+							<li>
+								<a href="#">新闻动态</a>
+							</li>
+							<li>
+								<a href="#">开发者中心</a>
+							</li>
+							<li>
+								<a href="#">开发者社区</a>
+							</li>
+							<li>
+								<a href="#">开放平台</a>
+							</li>
+							<li>
+								<a href="#">关于我们</a>
+							</li>
+						</ul>
+
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">简体中文</a>
+									</li>
+									<li>
+										<a href="#">繁体中文</a>
+									</li>
+									<li>
+										<a href="#">English</a>
+									</li>
+									<li role="separator" class="divider"></li>
+									<li>
+										<a href="#">Separated link</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container-fluid -->
+			</nav>
+		</header>
+		
+		<!--尾部-->
+		<footer>
+			<div class="container">
+				<div class="row footer-con">
+					<div class="col-sm-6  footer-con-text">
+						<a href="layaboxHome.html"><span>公司简介</span></a>
+						<a><span class="callPop">联系方式</span></a>
+						<a href="layaboxHome.html"><span>人才招聘</span></a>
+						<p>All Copyright Reserved by Layabox Inc. 京ICP备15008163号-1 </p>
+					</div>
+					<div class="col-sm-2 col-sm-push-4  footer-con-link">
+						<div class="row">
+							<div class="col-xs-4">
+								<!--<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."></button>-->
+  								<div class="footer-link-img emailPop">
+									<a href="#"><img src="img/shouye-FOOT-XF.png"/></a>
+								</div>									
+								
+							</div>
+							<div class="col-xs-4">
+								<div class="footer-link-img textPop">
+									<a href="#"><img src="img/shouye-FOOT-WX.png"/></a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="footer-link-img qqPop">
+									<a href="#"><img src="img/shouye-FOOT-QQ.png"/></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="js/jquery-2.1.0.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			//$(".textPop")
+			//需要点击跳出弹窗的元素
+			
+			//电话
+			$(".callPop").popover({
+				placement:"top",	//定位方向
+				trigger:"hover",	//这个是定义触发事件，等于data-trigger="click"
+				html:true,	//关键在这里，这样修改之后，我们的data-content里面就可以写html代码了
+				content:"<电话：010-56277796>"
+			});
+			//邮箱
+			$(".emailPop").popover({
+				placement:"top",	//定位方向
+				trigger:"hover",	//这个是定义触发事件，等于data-trigger="click"
+				html:true,	//关键在这里，这样修改之后，我们的data-content里面就可以写html代码了
+				content:"<邮箱：bd@layabox.com>"
+			});
+			
+			//微信
+			$(".textPop").popover({
+				placement:"top",	//定位方向
+				trigger:"hover",	//这个是定义触发事件，等于data-trigger="click"
+				html:true,	//关键在这里，这样修改之后，我们的data-content里面就可以写html代码了
+				content:"<img style='width: 100px; height: 100px;' src='img/shouye-FOOT-EWM.png'/>"
+			});
+			
+			//QQ
+			$(".qqPop").popover({
+				placement:"top",	//定位方向
+				trigger:"hover",	//这个是定义触发事件，等于data-trigger="click"
+				html:true,	//关键在这里，这样修改之后，我们的data-content里面就可以写html代码了
+				content:"<扣扣：123456789>"
+			});
+			
+		</script>
+	</body>
+</html>

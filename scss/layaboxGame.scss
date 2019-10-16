@@ -1,0 +1,299 @@
+@charset "utf-8";
+@import "common";
+body{
+    .game{
+        //热门游戏
+        .game-hot01{
+//          background-image: url(../img/game-hot.png), url(../img/game-hotBoy.png);
+//          background-repeat: no-repeat, no-repeat;
+//          background-position: 15px 0%, 0% calc(0% + 40px);
+             .game-hot01-img{
+                 position: relative;
+                img:last-of-type{
+                    position: absolute;
+                    left: 0;
+                    top: 40px;
+                    max-width: 100%;
+                }
+            }
+            .game-hot-list{
+                text-align: end;
+                h2{
+                    font-size: 30px;
+                    line-height: 30px;
+                    color: #2a2a2a;
+                    margin: 34px 0 9px;
+                }
+                p{
+                    font-size: 12px;
+                    line-height: 30px;
+                    color: #898989;
+                    margin: 2px 0 12px;
+                }
+                .game-hot-item{
+                    .game-item-img{
+                        margin-bottom: 30px;
+                        img{ 
+                            transition: all 1s;
+                            &:hover{
+                                transform: scale(1.01,1.01);
+                                opacity: 0.8;                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .game-hot02{
+//          background-image: url(../img/game-hotGirl.png);
+//          background-repeat: no-repeat;
+//          background-position: 100% calc(0% + 40px);
+            .game-hot02-img{
+                max-width: 100%;
+                margin-top: 55px;
+            }
+            .game-hot-list{
+                h2{
+                    font-size: 30px;
+                    line-height: 30px;
+                    color: #2a2a2a;
+                    margin: 34px 0 9px;
+                }
+                p{
+                    font-size: 12px;
+                    line-height: 30px;
+                    color: #898989;
+                    margin: 2px 0 12px;
+                }
+                .game-hot-item{
+                    .game-item-img{
+                        margin-bottom: 30px;
+                        img{ 
+                            transition: all 1s;
+                            &:hover{
+                                transform: scale(1.01,1.01);
+                                opacity: 0.8;                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //更多案列
+    .gameCase{
+        .container{
+            padding: 0;
+            h2{
+                font-size: 36px;
+                line-height: 36px;
+                padding: 0 15px;
+                margin: 93px 0 0;
+            }
+            .gameCase-item{
+                margin: 39px 0 0;
+                &:last-of-type{
+                    margin-bottom: 85px;
+                }
+                .gameCase-list{
+                    animation-duration: 2s;
+                    animation-name: bounceInUp;
+                    .gameCase-img-text{
+                        font-size: 0;
+                        position: relative; 
+                        overflow: hidden;
+                        img{ 
+                            transition: all 1s;
+                            &:hover{
+                                transform: scale(1.01,1.01);
+                                opacity: 0.8;                            
+                            }
+                        }
+                        .gameCase-text{
+                            height: 100%;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            color: white;
+                            background-color: rgba(0,0,0,.6);
+                            border-radius: 3px;
+                            overflow: hidden;
+                            transition: all 1s;
+                            p{
+                                font-size: 12px;
+                                margin: 13px;
+                            }
+                        }
+                        &:hover .gameCase-text{
+                            top: 0;
+                        }
+                    }
+                    >p{
+                        text-align: center;
+                        color: #2a2a2a;
+                        margin: 8px 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+//@media (max-width: 768px){    
+//  body .game .game-hot01{
+//      background-image: none;
+//      .game-hot-list{
+//          left: 0;
+//          text-align: initial;
+//      }
+//  }
+//  body .game .game-hot02{
+//      background-image: none;
+//  }
+//}
+
+//适配小屏幕（手机）
+@media (max-width: 768px){ 
+    //热门游戏
+   body .game {
+        .game-hot01 {
+            .game-hot01-img {
+               img {
+                    &:first-of-type{
+                        position: absolute;
+                        max-width: 100%;
+                        width: 8%;
+                    } 
+                    &:last-of-type{
+                        position: relative;
+                        top: 30px;
+                        left: 15%;
+                        max-width: 100%;
+                        width: 70%;
+                    } 
+                }
+            }
+            .game-hot-list {
+                text-align: initial;
+                h2 {
+                    font-size: 20px;
+                    line-height: 20px;
+                    text-align: center;
+                    margin: 60px 0 15px;
+                }
+            }
+        }
+        .game-hot02 {
+            .game-hot-list h2 {
+                font-size: 25px;
+                line-height: 25px;
+                text-align: center;
+                margin: 0 0 15px;
+            }
+            .game-hot02-img{
+                margin-top: 0px;
+                 img{
+                    width: 70%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    
+    //更多案列
+    body .gameCase .container {
+        h2 {
+            font-size: 20px;
+            line-height: 20px;
+            padding: 0 15px;
+            margin: 35px 0 0;
+        }
+        .gameCase-item{
+            margin: 20px 0 0;
+            &:last-of-type {
+                margin-bottom: 20px;
+            }
+            .gameCase-list {
+                .gameCase-img-text{
+                    .gameCase-text{
+                        p{
+                            font-size: 10px;
+                        }
+                    }
+                }
+                >p {
+                    margin: 8px 0 10px;
+                }
+            }
+        }
+    }
+}
+
+//适配中屏幕（iPad）
+@media (min-width: 768px) and (max-width: 992px){
+    //热门游戏
+   body .game {
+       .game-hot01 {
+           .game-hot01-img {
+                img{
+                    &:first-of-type{
+                        position: initial;
+                        width: 15%;
+                    } 
+                    &:last-of-type{
+                        position: absolute;
+                        top: 45px;
+                        left: 0%;
+                        width: 100%;
+                    } 
+                }
+            }
+            .game-hot-list {
+                text-align: end;
+                h2 {
+                    font-size: 25px;
+                    line-height: 25px;
+                    text-align: end;
+                    margin: 30px 0 20px;
+                }
+            }
+        }
+        .game-hot02 {
+            .game-hot-list h2 {
+                font-size: 25px;
+                line-height: 25px;
+                text-align: initial;
+                margin: 0 0 15px;
+            }
+            .game-hot02-img{
+                margin-top: 40px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    //更多案列
+    body .gameCase .container {
+        h2 {
+            font-size: 25px;
+            line-height: 25px;
+            padding: 0 15px;
+            margin: 30px 0 0;
+        }
+        .gameCase-item{
+            .gameCase-list {
+                .gameCase-img-text{
+                    .gameCase-text{
+                        p{
+                            font-size: 10px;
+                        }
+                    }
+                }
+                >p {
+                    margin: 10px 0 12px;
+                }
+            }
+        }
+    }
+}

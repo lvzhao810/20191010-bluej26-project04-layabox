@@ -1,0 +1,298 @@
+@charset "utf-8";
+@import "common";
+body{
+    //公司简介
+    .companyProfile{
+        .companyProfile-con{
+            background-image: url(../img/home-jj.png);
+            background-repeat: no-repeat;
+            background-position: calc(100% - 15px) calc(100% - 74px);
+            .companyProfile-text{
+                color: #2A2A2A;
+                h2{
+                    font-size: 36px;
+                    line-height: 36px;
+                    margin: 94px 0 0;
+                }
+                h3{
+                    font-size: 21px;
+                    line-height: 28px;
+                    margin: 27px 0 19px;
+                }
+                p{
+                    line-height: 30px;
+                    text-indent: 2em;
+                    margin-bottom: 12px;
+                    &:last-of-type{
+                        margin-bottom: 59px;
+                    }
+                }
+            }
+        }
+    }
+    //人才招聘
+    .talentRecruitment{
+        background-color: #8cc11f;
+        padding: 115px 0 75px;
+        .talentRecruitment-item{
+            padding: 0 15px;
+            color: white;
+            h2{
+                font-size: 36px;
+                line-height: 36px;
+                margin: 0 0 54px;
+            }
+            p{
+                font-size: 16px;
+                line-height: 30px;
+            }
+            .talentRecruitment-left{
+                padding: 0;
+            }
+            .talentRecruitment-right{
+                p{
+                    margin-bottom: 11px;
+                }
+                .mailbox{
+                    width: 219px;
+                    height: 48px;
+                    font-size: 24px;
+                    line-height: 48px;
+                    text-align: center;
+                    background-color: white;
+                    border-radius: 3px;
+                    margin-bottom: 9px;
+                    a{
+                        color: #8cc11f;
+                    }
+                }
+            }
+        }
+    }
+    //招聘职位
+    .post{
+        padding-bottom: 47px;
+        .post-item{
+            padding: 0 15px;
+            border-bottom: 1px solid #d2d2d2;
+            &:last-of-type{
+                border-bottom: 0;
+            }
+            .post-intro{
+                padding: 73px 0 50px;
+                h3{
+                    color: #8cc11f;
+                    margin: 0 0 34px;
+                }
+                ul{
+                    padding: 0;
+                    >li{
+                        font-size: 18px;
+                        line-height: 30px;
+                        list-style: none;
+                        dt{
+                            font-weight: normal;
+                            li{
+                                font-size: 14px;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //联系方式
+    .contactWay{
+        background-color: #F4F4F4;
+        padding: 42px 0;
+        h2{
+            font-size: 36px;
+            line-height: 36px;
+            margin: 0 0 39px;
+        }
+        .contactWay-list{
+            .contactWay-item{
+                .contactWay-box{
+                    border: 1px solid #E3E3E3;
+                    border-radius: 2px;
+                    padding: 11px 21px;
+                    background-color: white;
+                    display: flex;
+                    justify-content: flex-start;
+                    p{
+                        font-size: 16px;
+                        margin: 18px 0 0;
+                    }
+                    .contactWay-item-img{
+                        margin-right: 10px;
+                        img{
+                            transition: all 1s;
+                            &:hover{
+                                transform: scale(1.01,1.01);
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+                    &:last-of-type{
+                        margin: 0 0 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//适配小屏幕（手机）
+@media (max-width: 768px){ 
+    //公司简介
+    body .companyProfile .companyProfile-con {
+        background-image: none;
+        .companyProfile-text {
+            h2 {
+                font-size: 25px;
+                line-height: 25px;
+                margin: 30px 0 0;
+            }
+            h3 {
+                font-size: 18px;
+                line-height: 25px;
+                margin: 20px 0;
+            }
+            p:last-of-type {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    //人才招聘
+    body .talentRecruitment {
+        padding: 30px 0 10px;
+        .talentRecruitment-item {
+            h2 {
+                font-size: 25px;
+                line-height: 25px;
+                margin: 0 0 20px;
+            }
+            .talentRecruitment-right{
+                padding: 0;
+                p {
+                    font-size: 14px;
+                    line-height: 25px;
+                }
+                .mailbox {
+                    width: 180px;
+                    height: 32px;
+                    font-size: 20px;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+    //招聘职位
+    body .post {
+        padding-bottom: 10px;
+        .post-item .post-intro {
+            padding: 30px 0 10px;
+            h3 {
+                font-size: 20px;
+                margin: 0 0 20px;
+            }
+            ul > li {
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+    }
+    
+    //联系方式
+    body .contactWay {
+        padding: 30px 0 10px;
+        h2 {
+            font-size: 25px;
+            line-height: 25px;
+            margin: 0 0 20px;
+        }
+        .contactWay-list .contactWay-item {
+            .contactWay-box{
+                p{
+                    font-size: 14px;
+                    margin: 8px 0 0;
+                }
+            }
+        }
+    }
+}
+
+//适配中屏幕（iPad）
+@media (min-width: 768px) and (max-width: 992px){
+    //公司简介
+    body .companyProfile .companyProfile-con {
+        background-image: url(../img/home-jj.png);
+        background-size: 30%;
+        .companyProfile-text {
+            h2 {
+                font-size: 30px;
+                line-height: 30px;
+                margin: 45px 0 0;
+            }
+            h3 {
+                font-size: 20px;
+                line-height: 28px;
+                margin: 25px 0;
+            }
+            p:last-of-type {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    //人才招聘
+    body .talentRecruitment {
+        padding: 45px 0 20px;
+        .talentRecruitment-item {
+            h2 {
+                font-size: 35px;
+                line-height: 35px;
+                margin: 0 0 25px;
+            }
+            .talentRecruitment-right{
+                padding: 0;
+                .mailbox {
+                    height: 35px;
+                    line-height: 35px;
+                }
+            }
+            p {
+                font-size: 14px;
+                line-height: 25px;
+            }
+        }
+    }
+    //招聘职位
+    body .post {
+        padding-bottom: 20px;
+        .post-item .post-intro {
+            padding: 45px 0 20px;
+            h3 {
+                font-size: 22px;
+            }
+        }
+    }
+    
+    //联系方式
+    body .contactWay {
+        padding: 45px 0 20px;
+        h2 {
+            font-size: 30px;
+            line-height: 30px;
+            margin: 0 0 25px;
+        }
+        .contactWay-list .contactWay-item {
+            .contactWay-box{
+                p{
+                    font-size: 15px;
+                    margin: 10px 0 0;
+                }
+            }
+        }
+    }
+}

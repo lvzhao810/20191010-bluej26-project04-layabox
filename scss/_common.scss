@@ -1,0 +1,164 @@
+@charset "utf-8";
+@import "animate";
+//公共样式
+//工具类名，用来消除图片空白间隙
+.imgWrap{
+    img{
+        display: block;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+body{
+    padding-top: 50px;
+    header{ 
+        .navbar{
+            margin-bottom: 0;
+            .navbar-brand{
+                padding: 7px 15px 7px 20px;
+            }
+        }
+        .navbar-fixed-top{
+            border-width: 0px;
+        }
+    }
+    //快捷右导航栏
+    .ly-kj{
+        position: fixed;
+        text-align: center;
+        right: 15px;
+        bottom: 150px;
+        background-color: rgba(220,220,220,.5);
+        border-radius: 4px;
+        padding: 0 8px 6px;
+        i{
+            display: block;
+            width: 38px;
+            height: 45px;
+            font-size: 30px;
+            line-height: 45px;
+            color: grey;
+            border-bottom: 1px solid gray;
+        }
+        p{
+            font-size: 14px;
+            margin: 2px 0;
+        }
+        .ly-wx:hover{
+            color: green;
+            i{
+                color: green;
+            }
+        }
+        .ly-QQ:hover{
+            color: #B20000;
+            i{
+                color: #B20000;
+            }
+        }
+        .ly-top:hover{
+            color: dodgerblue;
+            i{
+                color: dodgerblue;
+            }
+        }
+    }
+    footer{
+        background-color: #3d3d3d;
+        .footer-con{
+            padding: 30px 0 37px;
+            color: #a1a3ab;
+            position: relative;
+            .footer-con-text{
+                a{
+                    color: #a1a3ab;
+                    span{
+                        line-height: 14px;
+                        margin-right: 10px;
+                    }
+                }
+                >p{
+                    line-height: 14px;
+                    margin: 0;
+                    margin-top: 10px;
+                }
+            }
+            .footer-con-link{
+                text-align: center;
+//              padding: 0;
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+                right: 0;
+                top: 30px;
+                .footer-link-img{
+                    display: inline-block;
+                    margin-top: 8px;
+                    img{
+                       transition: all 1s;
+                        &:hover{
+                            transform: scale(1.02,1.02);
+                            opacity: 0.8;                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    //快捷右导航栏
+    body .ly-kj i {
+        width: 30px;
+        height: 35px;
+        font-size: 25px;
+        line-height: 35px;
+    }
+    body .ly-kj p {
+        font-size: 12px;
+    }
+    //尾部
+    body footer .footer-con .footer-con-text p {
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 0;
+    }
+    body footer .footer-con{
+        padding: 80px 0 20px;
+        .footer-con-link{
+            left: 0;
+            top: 25px;
+        }
+    }
+}
+
+//去导航栏圆角
+@media (min-width: 768px){
+    .navbar {
+        border-radius: 0px;
+    } 
+}
+//修改宽度
+@media (min-width: 768px) and (max-width: 992px){
+    .navbar{
+        .nav>li>a{
+            padding: 15px 3px;
+        }
+    }
+    //快捷右导航栏
+    body .ly-kj i {
+        width: 38px;
+        height: 45px;
+        font-size: 30px;
+        line-height: 45px;
+    }
+    body .ly-kj p {
+        font-size: 14px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        width: 1000px;
+    }
+}
